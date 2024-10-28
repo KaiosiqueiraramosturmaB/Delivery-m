@@ -1,3 +1,7 @@
-import { Routes } from '@angular/router';
 
-export const routes: Routes = [];
+import { Routes } from '@angular/router';
+import { TelaInicialComponent } from './tela-inicial/tela-inicial.component';
+
+export const routes: Routes = [
+  { path: '', component: TelaInicialComponent }, // Rota padrão para TelaInicialComponent
+];
