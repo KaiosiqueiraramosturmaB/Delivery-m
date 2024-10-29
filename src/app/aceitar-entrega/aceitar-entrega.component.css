@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7; /* Cor de fundo da tela */
+    margin: 0;
+}
+
+.container {
+    background-color: #f5f5f5; /* Cor do fundo do card */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+}
+
+.container h1 {
+    color: #e60000; /* Cor vermelha para o título */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.container p {
+    color: #333;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button {
+    width: 45%;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.button.accept {
+    background-color: #00cc44; /* Verde para "Sim" */
+}
+
+.button.reject {
+    background-color: #e60000; /* Vermelho para "Não" */
+}

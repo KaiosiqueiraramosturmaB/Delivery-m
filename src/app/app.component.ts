@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { TelaInicialComponent } from './tela-inicial/tela-inicial.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  template: `<app-tela-inicial></app-tela-inicial>`, // Usando o componente aqui
+  imports: [TelaInicialComponent] // Importando o componente standalone
 })
 export class AppComponent {
-  title = 'Delivery-motoboy';
+  title = 'Delivery-motoboy'; 
 }
