@@ -1,19 +1,8 @@
-import { ApplicationConfig, mergeApplicationConfig, NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app.routes'; // Certifique-se de que este módulo está exportado corretamente
-import { AppComponent } from './app.component';
+import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import { provideRouter} from '@angular/router'; // Certifique-se de que este módulo está exportado corretamente
+import { provideHttpClient } from '@angular/common/http';
+import { routes } from './app.routes';
 
-@NgModule({
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    AppComponent, // Mantenha AppComponent aqui se ele for standalone
-    // Não inclua aqui TelaInicialComponent e AceitarEntregaComponent
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class appmodule{}
 export const appConfig: ApplicationConfig = {
-  providers: []
+  providers: [provideZoneChangeDetection({ eventCoalescing: true}), provideRouter(routes), provideHttpClient()]
 };

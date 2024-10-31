@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tela-inicial',
@@ -9,4 +10,9 @@ import { Component } from '@angular/core';
 })
 export class TelaInicialComponent {
 
+  constructor (private router: Router){}
+
+  irParaAceitarEntrega() {
+    this.router.navigate(['/aceitar-entrega'])
+  }
 }
